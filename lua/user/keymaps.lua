@@ -7,6 +7,8 @@ local keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
+keymap("t", "<S-Space>", " ", opts)
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -38,6 +40,10 @@ keymap("n", "<A-S-k>", ":m .-2<CR>==", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+
+-- Shorcut for searching and replacing (structure already written)
+keymap("n", "<C-S-r>", ":%s/<C-r><C-w>//gc<Left><Left><Left>", opts)
+keymap("n", "<C-s>", ":w<CR>", opts)
 
 -- Insert --
 -- Press jk fast to enter 
