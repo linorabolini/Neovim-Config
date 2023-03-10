@@ -25,6 +25,12 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+-- Terminal management
+keymap("n", "<M-1>", "<cmd>1:ToggleTerm<cr>", opts)
+keymap("n", "<M-2>", "<cmd>2:ToggleTerm<cr>", opts)
+keymap("n", "<M-3>", "<cmd>3:ToggleTerm<cr>", opts)
+keymap("n", "<M-4>", "<cmd>4:ToggleTerm<cr>", opts)
+
 -- Resize with arrows
 keymap("n", "<A-C-j>", ":resize +1<CR>", opts)
 keymap("n", "<A-C-k>", ":resize -1<CR>", opts)
@@ -42,6 +48,13 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Shorcut for searching and replacing (structure already written)
 keymap("n", "<C-S-r>", ":%s/<C-r><C-w>//gc<Left><Left><Left>", opts)
 keymap("n", "<C-s>", ":w<CR>", opts)
+
+-- HOP --
+keymap("n", "<S-f>", ":HopPattern<cr>", opts)
+keymap("n", "<leader>d", ":HopWord<cr>", opts)
+
+-- remap ENTER to N for iterate on searches --
+keymap("n", "<cr>", "n", opts)
 
 -- Insert --
 -- Press jk fast to enter 
@@ -73,6 +86,10 @@ keymap("x", "<A-S-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Terminal --
 -- Better terminal navigation
+keymap("t", "<M-1>", "<cmd>1:ToggleTerm<cr>", opts)
+keymap("t", "<M-2>", "<cmd>2:ToggleTerm<cr>", opts)
+keymap("t", "<M-3>", "<cmd>3:ToggleTerm<cr>", opts)
+keymap("t", "<M-4>", "<cmd>4:ToggleTerm<cr>", opts)
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
