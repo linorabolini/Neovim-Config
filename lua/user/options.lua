@@ -49,3 +49,8 @@ vim.opt.iskeyword:append "-"                           -- hyphenated words recog
 vim.opt.formatoptions:remove({ "c", "r", "o" })        -- don't insert the current comment leader automatically for auto-wrapping comments using 'textwidth', hitting <Enter> in insert mode, or hitting 'o' or 'O' in normal mode.
 vim.opt.runtimepath:remove("/usr/share/vim/vimfiles")  -- separate vim plugins from neovim in case vim still in use
 
+vim.api.nvim_create_user_command('W', 'w', {}) -- custom command to save with :W 
+vim.api.nvim_create_user_command('WQ', 'wq', {})
+vim.api.nvim_create_user_command('Wq', 'wq', {})
+vim.api.nvim_create_user_command('Qa', 'qa', {})
+vim.api.nvim_create_user_command('Q', 'q', {})
