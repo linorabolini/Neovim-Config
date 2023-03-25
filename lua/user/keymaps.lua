@@ -47,14 +47,10 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Shorcut for searching and replacing (structure already written)
 keymap("n", "<C-S-r>", ":%s/<C-r><C-w>//gc<Left><Left><Left>", opts)
-keymap("n", "<C-s>", ":w<CR>", opts)
 
 -- HOP --
 keymap("n", "<S-f>", ":HopPattern<cr>", opts)
-keymap("n", "<leader>d", ":HopWord<cr>", opts)
-
--- remap ENTER to N for iterate on searches --
-keymap("n", "<cr>", "n", opts)
+keymap("n", "<C-F>", ":HopWord<cr>", opts)
 
 -- Insert --
 -- Press jk fast to enter 
@@ -76,6 +72,8 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "<A-S-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-S-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
+keymap("v", "<leader>d", '<cmd>HopWord<cr>', opts)
+keymap("v", "<S-f>", '<cmd>HopPattern<cr>', opts)
 
 -- Visual Block --
 -- Move text up and down

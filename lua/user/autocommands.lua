@@ -28,6 +28,12 @@ vim.cmd [[
     autocmd!
     autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
   augroup end
+
+  " augroup _custom_cursor
+    " autocmd!
+    " autocmd CursorHold * silent!lua vim.lsp.diagnostic.open_float(nil, { focus = false })
+    " autocmd CursorHoldI * silent! lua vim.lsp.buf.signature_help()
+  " augroup end
 ]]
 
 -- Autoformat
