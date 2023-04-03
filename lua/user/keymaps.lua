@@ -41,16 +41,18 @@ keymap("n", "<A-C-l>", ":vertical resize -1<CR>", opts)
 keymap("n", "<A-S-j>", ":m .+1<CR>==", opts)
 keymap("n", "<A-S-k>", ":m .-2<CR>==", opts)
 
+-- Center view after moving
+keymap("n", "<C-u>", "<C-u>zz", opts)
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "n", "nzzzv", opts)
+keymap("n", "N", "Nzzzv", opts)
+
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Shorcut for searching and replacing (structure already written)
 keymap("n", "<C-S-r>", ":%s/<C-r><C-w>//gc<Left><Left><Left>", opts)
-
--- HOP --
-keymap("n", "<S-f>", ":HopPattern<cr>", opts)
-keymap("n", "<C-F>", ":HopWord<cr>", opts)
 
 -- Insert --
 -- Press jk fast to enter 
@@ -72,8 +74,6 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "<A-S-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-S-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
-keymap("v", "<leader>d", '<cmd>HopWord<cr>', opts)
-keymap("v", "<S-f>", '<cmd>HopPattern<cr>', opts)
 
 -- Visual Block --
 -- Move text up and down
