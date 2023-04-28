@@ -52,7 +52,7 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Shorcut for searching and replacing (structure already written)
-keymap("n", "<C-S-r>", ":%s/<C-r><C-w>//gc<Left><Left><Left>", opts)
+keymap("n", "<S-r>", ":%s/<C-r><C-w>//gc<Left><Left><Left>", opts)
 
 -- Insert --
 -- Press jk fast to enter 

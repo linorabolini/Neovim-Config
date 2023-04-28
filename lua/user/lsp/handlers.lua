@@ -11,7 +11,6 @@ M.capabilities = cmp_nvim_lsp.default_capabilities(M.capabilities)
 
 M.setup = function()
 	local signs = {
-
 		{ name = "DiagnosticSignError", text = "" },
 		{ name = "DiagnosticSignWarn", text = "" },
 		{ name = "DiagnosticSignHint", text = "" },
@@ -31,12 +30,12 @@ M.setup = function()
 		underline = true,
 		severity_sort = true,
 		float = {
-			focusable = true,
+			focusable = false,
 			style = "minimal",
 			border = "rounded",
 			source = "always",
-			header = "",
-			prefix = "",
+			header = "always",
+			prefix = "always",
 		},
 	}
 
@@ -69,6 +68,7 @@ local function lsp_keymaps(bufnr)
 	keymap(bufnr, "n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
 	keymap(bufnr, "n", "<leader>ls", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 	keymap(bufnr, "n", "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
+  keymap(bufnr, "n", "<leader>le", "mF:%!eslint_d --stdin --fix-to-stdout<CR>`F", opts)
 end
 
 M.on_attach = function(client, bufnr)
