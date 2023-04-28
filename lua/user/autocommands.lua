@@ -28,23 +28,5 @@ vim.cmd [[
     autocmd!
     autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
   augroup end
-
-  " augroup _custom_cursor
-  "   autocmd!
-  "   autocmd CursorHold * silent! lua vim.diagnostic.open_float()
-  "   autocmd CursorHold * silent! lua vim.lsp.buf.signature_help()
-  " augroup end
-
-  " -- Autoformat
-  " augroup _lsp
-  "   autocmd!
-  "   autocmd BufWritePre * lua vim.lsp.buf.formatting()
-  " augroup end
-
-  " call lsp hover on hover after 300 ms
-  " augroup _lsp_hover
-  "   autocmd!
-  "   autocmd CursorHold * lua vim.lsp.buf.hover()
-  " augroup end
 ]]
 
