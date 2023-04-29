@@ -12,7 +12,7 @@ local code_actions = null_ls.builtins.code_actions
 null_ls.setup({
 	debug = false,
 	sources = {
-    diagnostics.eslint_d,
+    diagnostics.eslint_d.with({ diagnostics_format = "[eslint] #{m}\n(#{c})"}),
     code_actions.eslint_d,
     -- formatting.eslint_d,
 		formatting.prettierd,
