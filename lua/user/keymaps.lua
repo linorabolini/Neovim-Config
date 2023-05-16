@@ -55,12 +55,6 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<S-r>", ":%s/<C-r><C-w>//gc<Left><Left><Left>", opts)
 
 -- Insert --
--- Press jk fast to enter 
-keymap("i", "jk", "<ESC>", opts)
-keymap("i", "Jk", "<ESC>", opts)
-keymap("i", "jK", "<ESC>", opts)
-keymap("i", "JK", "<ESC>", opts)
-
 -- Move text up/ down 
 keymap("i", "<A-S-j>", "<ESC>:m .+1<CR>==gi", opts)
 keymap("i", "<A-S-k>", "<ESC>:m .-2<CR>==gi", opts)

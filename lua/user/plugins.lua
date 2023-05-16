@@ -56,7 +56,6 @@ return packer.startup(function(use)
   use { "lukas-reineke/indent-blankline.nvim", commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6" }
   use { "goolord/alpha-nvim", commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31" }
 	use {"folke/which-key.nvim"}
-  use { "heavenshell/vim-jsdoc" } -- JSDoc support
 
 	-- Colorschemes
   use "Shatur/neovim-ayu"
