@@ -25,6 +25,8 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+keymap("n", "<S-Space>", '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
+
 -- Terminal management
 keymap("n", "<M-1>", "<cmd>1:ToggleTerm<cr>", opts)
 keymap("n", "<M-2>", "<cmd>2:ToggleTerm<cr>", opts)
@@ -40,6 +42,12 @@ keymap("n", "<A-C-l>", ":vertical resize -1<CR>", opts)
 -- Move text up/ down 
 keymap("n", "<A-S-j>", ":m .+1<CR>==", opts)
 keymap("n", "<A-S-k>", ":m .-2<CR>==", opts)
+
+-- Live Grep
+keymap("n", "<D-f>", ":Telescope live_grep <CR>", opts)
+
+-- Better Delete
+keymap("n", "D-d", '"_d', opts)
 
 -- Center view after moving
 keymap("n", "<C-u>", "<C-u>zz", opts)
