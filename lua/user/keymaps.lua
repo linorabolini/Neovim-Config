@@ -86,10 +86,10 @@ keymap("x", "<A-S-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Terminal --
 -- Better terminal navigation
-keymap("t", "<M-1>", "<cmd>1:ToggleTerm<cr>", opts)
-keymap("t", "<M-2>", "<cmd>2:ToggleTerm<cr>", opts)
-keymap("t", "<M-3>", "<cmd>3:ToggleTerm<cr>", opts)
-keymap("t", "<M-4>", "<cmd>4:ToggleTerm<cr>", opts)
+keymap("t", "<M-1>", "<cmd>1:ToggleTerm<cr>a", opts)
+keymap("t", "<M-2>", "<cmd>2:ToggleTerm<cr>a", opts)
+keymap("t", "<M-3>", "<cmd>3:ToggleTerm<cr>a", opts)
+keymap("t", "<M-4>", "<cmd>4:ToggleTerm<cr>a", opts)
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
