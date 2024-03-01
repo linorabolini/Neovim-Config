@@ -15,7 +15,7 @@ null_ls.setup({
     diagnostics.eslint_d.with({ diagnostics_format = "[eslint] #{m}\n(#{c})"}),
     code_actions.eslint_d,
     -- formatting.eslint_d,
-		formatting.prettierd,
+		formatting.prettier,
 		-- formatting.black.with({ extra_args = { "--fast" } }),
 		-- formatting.stylua,
     -- diagnostics.flake8

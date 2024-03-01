@@ -46,5 +46,8 @@ vim.cmd [[
   "   autocmd!
   "   autocmd CursorHold * silent! lua vim.lsp.buf.hover()
   " augroup end
+
+  autocmd RecordingEnter * set cmdheight=1
+  autocmd RecordingLeave * set cmdheight=0
 ]]
 

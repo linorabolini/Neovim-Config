@@ -2,11 +2,12 @@ local options = {
   backup = false,                          -- creates a backup file
   clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
   cmdheight = 0,                           -- more space in the neovim command line for displaying messages
-  completeopt = { "menuone", "noselect" }, -- mostly just for cmp
+  -- completeopt = { "menuone", "noselect" }, -- mostly just for cmp
   conceallevel = 0,                        -- so that `` is visible in markdown files
   fileencoding = "utf-8",                  -- the encoding written to a file
   hlsearch = true,                         -- highlight all matches on previous search pattern
-  ignorecase = true,                       -- ignore case in search patterns
+  incsearch = true,                        -- incremental search
+  ignorecase = false,                      -- ignore case in search patterns
   mouse = "a",                             -- allow the mouse to be used in neovim
   pumheight = 10,                          -- pop up menu height
   showmode = false,                        -- we don't need to see things like -- INSERT -- anymore
@@ -34,9 +35,12 @@ local options = {
   linebreak = true,                        -- companion to wrap, don't split words
   scrolloff = 8,                           -- minimal number of screen lines to keep above and below the cursor
   sidescrolloff = 8,                       -- minimal number of screen columns either side of cursor if wrap is `false`
-  guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20",
+  guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20", -- the guicursor to use in neovim mode
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
   whichwrap = "bs<>[]hl",                  -- which "horizontal" keys are allowed to travel to prev/next line
+  autoindent = true,                       -- copy indent from current line when starting a new line
+  breakindent = true,                      -- indent wrapped lines
+  lazyredraw = true,                       -- lazyredraw to make macro faster
 }
 
 for k, v in pairs(options) do
