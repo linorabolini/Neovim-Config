@@ -5,7 +5,7 @@ end
 
 configs.setup({
   ensure_installed = { "bash", "javascript", "json", "lua", "python", "typescript", "tsx", "css", "yaml", "markdown",
-    "markdown_inline" },         -- one of "all" or a list of languages
+    "markdown_inline", "astro" },         -- one of "all" or a list of languages
   ignore_install = { "phpdoc" }, -- List of parsers to ignore installing
   highlight = {
     enable = true,               -- needed for cool colors in jsx
